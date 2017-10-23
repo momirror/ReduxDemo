@@ -1,24 +1,16 @@
 import React, {Component} from 'react';
 import {Text, View, StyleSheet, Button} from 'react-native';
 import {CommonStyle} from "../sytles/CommonStyle";
-import {add1, add100000000, minus1} from '../actions/actions';
-
+import {add1, add100000000} from '../actions/actions';
 import {connect} from 'react-redux';
 
 class AddScreen extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {result: 0};
-    }
-
     add1 = () => {
-        console.log('+1');
         this.props.dispatch(add1());
     }
 
-    add100000000 = async () => {
-        console.log('+100000000');
+    asnyAdd = async () => {
         this.props.dispatch(function (dispatch) {
             setTimeout(() => {
                 dispatch(add100000000())
@@ -32,10 +24,9 @@ class AddScreen extends Component {
     render() {
         return (<View>
             <Text style={CommonStyle.result}>当前结果是:{this.props.result}</Text>
-
             <View style={CommonStyle.buttons}>
                 <Button title={"加1"} onPress={this.add1}></Button>
-                <Button title={"异步加100000000"} onPress={this.add100000000}/>
+                <Button title={"异步加100000000"} onPress={this.asnyAdd}/>
             </View>
 
         </View>);

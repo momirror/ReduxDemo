@@ -6,8 +6,7 @@ import {minus1} from '../actions/actions';
 
 class MinusScreen extends Component {
 
-    minus1 = () => {
-        console.log('-1');
+    minus = () => {
         this.props.dispatch(minus1());
     }
 
@@ -15,7 +14,7 @@ class MinusScreen extends Component {
         return (<View>
             <Text style={CommonStyle.result}>当前结果是:{this.props.result}</Text>
             <View style={CommonStyle.buttons}>
-                <Button title={"减1"} onPress={this.minus1}></Button>
+                <Button title={"减1"} onPress={this.minus}></Button>
             </View>
         </View>);
     }

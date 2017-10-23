@@ -35,7 +35,7 @@ const MainScreenNavigator = TabNavigator({
 });
 
 MainScreenNavigator.navigationOptions = {
-    title: 'Redex Demo',
+    title: 'Redux Demo',
 };
 
 const APPNavigator = StackNavigator({
