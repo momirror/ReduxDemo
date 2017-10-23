@@ -1,7 +1,7 @@
 import React from 'react';
 import {StackNavigator,TabNavigator} from 'react-navigation';
-import {AddScreen} from './AddScreen';
-import {SubScreen} from './SubScreen';
+import AddScreen from './screens/AddScreen';
+import MinusScreen from './screens/MinusScreen';
 
 const MainScreenNavigator = TabNavigator({
     AddScreen: {
@@ -10,8 +10,8 @@ const MainScreenNavigator = TabNavigator({
             tabBarLabel: '增加',
         }
     },
-    SubScreen: {
-        screen: SubScreen,
+    MinusScreen: {
+        screen: MinusScreen,
         navigationOptions: {
             tabBarLabel: '减少',
         }
@@ -23,7 +23,7 @@ const MainScreenNavigator = TabNavigator({
 
     tabBarOptions: {
         style: {
-            height: 59
+            height: 59,
         },
         showIcon: false,
         activeBackgroundColor:'#CCFFFF',

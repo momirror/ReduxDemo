@@ -3,7 +3,7 @@ import {Component} from 'react';
 import {APPNavigator} from './Tab';
 import {AppRegistry} from 'react-native';
 import {Provider} from 'react-redux';
-// import store from './store';
+import store from './store';
 
 class App extends Component {
     constructor(props) {
@@ -13,8 +13,9 @@ class App extends Component {
 
     render() {
         return (
-
+            <Provider store={store}>
                 <APPNavigator></APPNavigator>
+            </Provider>
 
         );
     }
