@@ -28,7 +28,7 @@ const MainScreenNavigator = TabNavigator({
         showIcon: false,
         activeBackgroundColor:'#CCFFFF',
         activeTintColor:'blue',
-        inactiveBackgroundColor:'#CCFFFF',
+        inactiveBackgroundColor:'#CCFF00',
         inactiveTintColor:'#aaa',
         showLabel:true,
     }
